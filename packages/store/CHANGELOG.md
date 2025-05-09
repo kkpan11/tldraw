@@ -1,3 +1,47 @@
+# v3.12.0 (Tue Apr 15 2025)
+
+### Release Notes
+
+#### Store.atomic and Store.mergeRemoteChanges fixes ([#5801](https://github.com/tldraw/tldraw/pull/5801))
+
+- Make `store.mergeRemoteChanges` atomic. This allows after* side effects to react to incoming changes and to propagate any effects to other clients via `'user'`-scoped store change events.
+
+---
+
+#### 🐛 Bug Fix
+
+- Better whyAmIRunning [#5746](https://github.com/tldraw/tldraw/pull/5746) ([@ds300](https://github.com/ds300))
+
+#### 💄 Product Improvements
+
+- Store.atomic and Store.mergeRemoteChanges fixes [#5801](https://github.com/tldraw/tldraw/pull/5801) ([@ds300](https://github.com/ds300))
+
+#### Authors: 1
+
+- David Sheldrick ([@ds300](https://github.com/ds300))
+
+---
+
+# v3.11.0 (Thu Mar 20 2025)
+
+### Release Notes
+
+#### security: provide a way to pass through `nonce` to the editor ([#5607](https://github.com/tldraw/tldraw/pull/5607))
+
+- Provide support to pass through `nonce` to the Editor.
+
+---
+
+#### 🎉 New Features
+
+- security: provide a way to pass through `nonce` to the editor [#5607](https://github.com/tldraw/tldraw/pull/5607) ([@mimecuvalo](https://github.com/mimecuvalo))
+
+#### Authors: 1
+
+- Mime Čuvalo ([@mimecuvalo](https://github.com/mimecuvalo))
+
+---
+
 # v3.10.0 (Tue Mar 11 2025)
 
 ### Release Notes
