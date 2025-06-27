@@ -147,15 +147,18 @@ export {
 	type BindingOnShapeIsolateOptions,
 	type TLBindingUtilConstructor,
 } from './lib/editor/bindings/BindingUtil'
-export { ClickManager, type TLClickState } from './lib/editor/managers/ClickManager'
-export { EdgeScrollManager } from './lib/editor/managers/EdgeScrollManager'
+export { ClickManager, type TLClickState } from './lib/editor/managers/ClickManager/ClickManager'
+export { EdgeScrollManager } from './lib/editor/managers/EdgeScrollManager/EdgeScrollManager'
 export {
 	FontManager,
 	type TLFontFace,
 	type TLFontFaceSource,
-} from './lib/editor/managers/FontManager'
-export { HistoryManager } from './lib/editor/managers/HistoryManager'
-export { ScribbleManager, type ScribbleItem } from './lib/editor/managers/ScribbleManager'
+} from './lib/editor/managers/FontManager/FontManager'
+export { HistoryManager } from './lib/editor/managers/HistoryManager/HistoryManager'
+export {
+	ScribbleManager,
+	type ScribbleItem,
+} from './lib/editor/managers/ScribbleManager/ScribbleManager'
 export {
 	BoundsSnaps,
 	type BoundsSnapGeometry,
@@ -169,12 +172,20 @@ export {
 	type SnapData,
 	type SnapIndicator,
 } from './lib/editor/managers/SnapManager/SnapManager'
-export { TextManager, type TLMeasureTextSpanOpts } from './lib/editor/managers/TextManager'
-export { UserPreferencesManager } from './lib/editor/managers/UserPreferencesManager'
+export {
+	TextManager,
+	type TLMeasureTextOpts,
+	type TLMeasureTextSpanOpts,
+} from './lib/editor/managers/TextManager/TextManager'
+export { UserPreferencesManager } from './lib/editor/managers/UserPreferencesManager/UserPreferencesManager'
 export { BaseBoxShapeUtil, type TLBaseBoxShape } from './lib/editor/shapes/BaseBoxShapeUtil'
 export {
 	ShapeUtil,
 	type TLCropInfo,
+	type TLDragShapesInInfo,
+	type TLDragShapesOutInfo,
+	type TLDragShapesOverInfo,
+	type TLDropShapesOverInfo,
 	type TLGeometryOpts,
 	type TLHandleDragInfo,
 	type TLResizeInfo,
@@ -185,7 +196,10 @@ export {
 	type TLShapeUtilConstructor,
 } from './lib/editor/shapes/ShapeUtil'
 export { GroupShapeUtil } from './lib/editor/shapes/group/GroupShapeUtil'
-export { getPerfectDashProps } from './lib/editor/shapes/shared/getPerfectDashProps'
+export {
+	getPerfectDashProps,
+	type PerfectDashTerminal,
+} from './lib/editor/shapes/shared/getPerfectDashProps'
 export { resizeBox, type ResizeBoxOptions } from './lib/editor/shapes/shared/resizeBox'
 export { resizeScaled } from './lib/editor/shapes/shared/resizeScaled'
 export { BaseBoxShapeTool } from './lib/editor/tools/BaseBoxShapeTool/BaseBoxShapeTool'
@@ -243,6 +257,7 @@ export {
 	type TLExternalContent,
 	type TLExternalContentSource,
 	type TLFileExternalAsset,
+	type TLFileReplaceExternalContent,
 	type TLFilesExternalContent,
 	type TLSvgTextExternalContent,
 	type TLTextExternalContent,
@@ -435,6 +450,7 @@ export { hardResetEditor } from './lib/utils/hardResetEditor'
 export { isAccelKey } from './lib/utils/keyboard'
 export { normalizeWheel } from './lib/utils/normalizeWheel'
 export { refreshPage } from './lib/utils/refreshPage'
+export { getDroppedShapesToNewParents, kickoutOccludedShapes } from './lib/utils/reparenting'
 export {
 	getFontsFromRichText,
 	type RichTextFontVisitor,
